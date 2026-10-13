@@ -76,7 +76,7 @@ button.secondary{background:#ffffff0b;color:#ffe5ef;border:1px solid #ffc9dc55;b
   </section>
   <section class="card">
     <h2>3.5 years of us ♡</h2>
-    <p>4 years, countless conversations, silly jokes, little fights, patch-ups, and so many reasons to choose you again. Har version of life mein, I’d still want to find my way to you.</p>
+    <p>3 years, countless conversations, silly jokes, little fights, patch-ups, and so many reasons to choose you again. Har version of life mein, I’d still want to find my way to you.</p>
   </section>
   <section class="card">
     <h2>A letter, just for you</h2>
@@ -112,5 +112,37 @@ document.getElementById('musicText').addEventListener('click',toggleMusic);
 document.getElementById('letterBtn').addEventListener('click',()=>{const letter=document.getElementById('letter'),open=letter.classList.toggle('show');document.getElementById('letterBtn').setAttribute('aria-expanded',String(open));document.getElementById('letterBtn').textContent=open?'Close your letter ♡':'Read your letter 💌';if(open){celebrate();letter.scrollIntoView({behavior:'smooth',block:'center'})}});
 document.getElementById('secretBtn').addEventListener('click',()=>{const s=document.getElementById('secret');s.classList.toggle('show');document.getElementById('secretBtn').textContent=s.classList.contains('show')?'Keep this close to your heart ♡':'One last little thing…';if(s.classList.contains('show'))celebrate()});
 </script>
+  
+<script>
+  // Set the time when the birthday page expires (India time).
+  // Example: October 16, 2026, at midnight IST.
+  const expiryDate = new Date("2026-10-20T00:00:00+05:30");
+
+  if (Date.now() >= expiryDate.getTime()) {
+    document.body.innerHTML = `
+      <main style="
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:28px;
+        background:#180d20;
+        color:#fff2e8;
+        font-family:Georgia,serif;
+      ">
+        <div style="font-size:64px">🌙</div>
+        <h1 style="color:#ffb7ce">A little memory, forever ♡</h1>
+        <p style="font-size:18px;line-height:1.8;max-width:340px">
+          This birthday surprise has ended, but the love behind it
+          hasn't. Happy memories, Ayesha. ❤️
+        </p>
+      </main>
+    `;
+  }
+</script>
+</body>
+</html>
 </body>
 </html>
