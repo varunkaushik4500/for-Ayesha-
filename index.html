@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#180d20">
+<meta name="description" content="A little birthday universe made with love for Ayesha.">
+<title>For Ayesha ♡</title>
+<style>
+:root{--night:#180d20;--plum:#30172f;--pink:#ffb7ce;--rose:#ff739f;--cream:#fff2e8;--gold:#ffd99a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100svh;color:var(--cream);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(ellipse at 50% 0%,#512545 0%,#28152e 38%,var(--night) 78%);overflow-x:hidden}
+button{font:inherit}
+.sky,.sparkles,.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff5e9;opacity:.75;animation:twinkle 2.8s ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:.15;transform:scale(.55)}}
+.heart{position:absolute;bottom:-40px;color:#ff8eb5;opacity:0;animation:floatUp linear infinite;text-shadow:0 0 14px #ff6d9a66}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}12%{opacity:.6}85%{opacity:.35}100%{transform:translateY(-115vh) rotate(24deg);opacity:0}}
+main{position:relative;z-index:1;width:min(100% - 30px,520px);margin:auto;padding:36px 0 58px;text-align:center}
+.eyebrow{font:600 11px/1.5 system-ui,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#f8c6d7}
+.hero{padding:32px 18px 22px}
+.moon{margin:0 auto 20px;width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#fff2db,#ffcbce 70%);box-shadow:0 0 35px #ffb6ce66,0 0 90px #ffb6ce22;position:relative}
+.moon:after{content:"";position:absolute;width:67px;height:67px;border-radius:50%;background:#382039;top:-8px;left:19px}
+h1{font-size:clamp(42px,12vw,64px);font-weight:normal;line-height:1.03;letter-spacing:-.045em;margin:12px 0;color:#fff0f1;text-shadow:0 0 32px #ffb7ce22}
+h1 span{display:block;color:var(--pink);font-style:italic}
+.subtitle{font-size:17px;line-height:1.7;color:#f2dce7;max-width:350px;margin:17px auto 24px}
+button.primary{border:0;border-radius:999px;padding:15px 23px;background:linear-gradient(120deg,#ffd8a6,#ff9fc0);color:#3c1b31;font:700 13px system-ui,sans-serif;letter-spacing:.04em;box-shadow:0 8px 28px #ff91b544;cursor:pointer;transition:transform .2s,box-shadow .2s}
+button.primary:active{transform:scale(.97)}
+button.secondary{background:#ffffff0b;color:#ffe5ef;border:1px solid #ffc9dc55;border-radius:999px;padding:12px 17px;font:600 12px system-ui,sans-serif;cursor:pointer}
+.music-row{display:flex;justify-content:center;align-items:center;gap:10px;margin:18px auto 0;color:#e9c8d8;font:12px system-ui,sans-serif}
+.equalizer{display:flex;align-items:center;gap:3px;height:15px}
+.equalizer i{display:block;width:3px;height:5px;background:var(--pink);border-radius:3px}
+.equalizer.playing i{animation:eq .65s ease-in-out infinite alternate}
+.equalizer i:nth-child(2){animation-delay:.15s}.equalizer i:nth-child(3){animation-delay:.3s}.equalizer i:nth-child(4){animation-delay:.1s}
+@keyframes eq{to{height:14px}}
+.rule{height:1px;width:64px;background:linear-gradient(90deg,transparent,#f5b9d2,transparent);margin:22px auto}
+.card{background:linear-gradient(145deg,#ffffff0d,#ffffff04);border:1px solid #ffd1e21f;border-radius:25px;padding:24px 21px;margin:18px 0;box-shadow:0 18px 55px #00000018;backdrop-filter:blur(8px)}
+.card h2{font-size:26px;font-weight:normal;color:#ffd2df;margin:0 0 12px}
+.card p{font-size:16px;line-height:1.8;color:#f4e1e9;margin:0}
+.cake-wrap{padding:12px 0 4px}
+.cake{font-size:76px;filter:drop-shadow(0 0 20px #ffb1ca3b);animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-7px)}}
+.cake-note{font:11px system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#eeb7ce;margin-top:7px}
+.letter{display:none;text-align:left;animation:appear .8s ease both}
+.letter.show{display:block}
+.letter h2{text-align:center}
+.letter p{font-size:16px;line-height:1.95}
+.signature{text-align:right!important;color:var(--pink)!important;font-style:italic;font-size:21px!important;margin-top:14px!important}
+.hidden-message{display:none;margin-top:18px;padding-top:17px;border-top:1px solid #ffd1e22a;color:#ffccdc;font-style:italic;line-height:1.8}
+.hidden-message.show{display:block;animation:appear .8s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.footer{font:11px/1.8 system-ui,sans-serif;letter-spacing:.06em;color:#bda0b6;margin:28px 10px 0}
+.footer .tiny-heart{color:#ff9cbe;font-size:15px}
+.confetti{position:fixed;top:-20px;z-index:4;pointer-events:none;animation:fall 3.8s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(760deg);opacity:.15}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true"></div><div class="hearts" id="hearts" aria-hidden="true"></div>
+<main>
+  <section class="hero">
+    <div class="eyebrow">a little universe, just for you</div>
+    <div class="moon" aria-hidden="true"></div>
+    <h1>Happy Birthday,<span>Ayesha ♡</span></h1>
+    <p class="subtitle">Aaj ka din thoda aur special hai… because the world got you, and somehow, I got lucky enough to love you.</p>
+    <button class="primary" id="startBtn">Open your little surprise ✨</button>
+    <div class="music-row"><div class="equalizer" id="eq"><i></i><i></i><i></i><i></i></div><span id="musicText">Tap to start our soft little melody</span></div>
+  </section>
+  <div class="rule"></div>
+  <section class="card">
+    <div class="cake-wrap"><div class="cake" aria-label="Birthday cake">🎂</div><div class="cake-note">Make a wish, birthday girl</div></div>
+    <h2>For my favourite person</h2>
+    <p>Ayesha, tumhari smile meri favourite notification hai. Tumhare saath ordinary moments bhi memories ban jaate hain. I hope today gives you even a little of the happiness you bring into my life.</p>
+  </section>
+  <section class="card">
+    <h2>Four years of us ♡</h2>
+    <p>4 years, countless conversations, silly jokes, little fights, patch-ups, and so many reasons to choose you again. Har version of life mein, I’d still want to find my way to you.</p>
+  </section>
+  <section class="card">
+    <h2>A letter, just for you</h2>
+    <p style="margin-bottom:18px">Kuch baatein hoti hain jo daily bol nahi paata… so I made you a little corner for them.</p>
+    <button class="secondary" id="letterBtn" aria-expanded="false">Read your letter 💌</button>
+    <div class="letter" id="letter">
+      <div class="rule"></div>
+      <p>My Ayesha,</p>
+      <p>Happy birthday, meri jaan. ❤️</p>
+      <p>Four years ago, I didn’t know that one person could become such a beautiful part of my everyday life. And now, tumhari khushi meri khushi se itni connected hai ki tumhari smile dekh kar mera din ban jaata hai.</p>
+      <p>Main promise nahi karunga ki har din perfect hoga. But I promise to keep trying, keep listening, keep laughing with you, and keep choosing us — even on the ordinary days, when there’s no cake, no candles, and no big celebration.</p>
+      <p>I hope this new year of your life brings you peace, confidence, adventures, and every little thing your heart quietly wishes for. You deserve a love that feels safe, a life that feels exciting, and a thousand reasons to smile.</p>
+      <p>Aaj tumhara birthday hai, but honestly, I’m the one who feels lucky. Thank you for being you, Ayesha. If I could make one wish tonight, it would be for many more birthdays where I get to see you smile.</p>
+      <p>Happy birthday, my favourite human. Aaj bhi, kal bhi, and in all the little tomorrows. ♡</p>
+      <p class="signature">Always yours,<br>Your favourite software engineer 😉</p>
+      <button class="secondary" id="secretBtn">One last little thing…</button>
+      <div class="hidden-message" id="secret">No matter how busy life gets, I hope you always remember this: somewhere in this big, noisy world, there’s a person who is endlessly grateful that you exist. That person is me. ❤️</div>
+    </div>
+  </section>
+  <p class="footer">Made with a little code, a lot of love, and <span class="tiny-heart">♥</span><br>For Ayesha Hossain — my favourite plot twist.</p>
+</main>
+<script>
+const sky=document.getElementById('sky'), hearts=document.getElementById('hearts');
+for(let i=0;i<95;i++){const s=document.createElement('span');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=(Math.random()*4)+'s';s.style.opacity=(.2+Math.random()*.7);s.style.width=s.style.height=(Math.random()<.18?3:2)+'px';sky.appendChild(s)}
+for(let i=0;i<17;i++){const h=document.createElement('span');h.className='heart';h.textContent=['♡','♥','✧'][i%3];h.style.left=Math.random()*100+'%';h.style.fontSize=(12+Math.random()*19)+'px';h.style.animationDuration=(12+Math.random()*13)+'s';h.style.animationDelay=(-Math.random()*24)+'s';hearts.appendChild(h)}
+let audioCtx=null, melodyTimer=null, noteIndex=0, playing=false;
+const notes=[261.63,329.63,392,329.63,293.66,349.23,440,392,261.63,329.63,392,523.25,440,392,349.23,329.63];
+function playNote(){if(!audioCtx||!playing)return;const now=audioCtx.currentTime;const freq=notes[noteIndex%notes.length];noteIndex++;const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.setValueAtTime(freq,now);gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.055,now+.12);gain.gain.exponentialRampToValueAtTime(.0001,now+1.1);osc.connect(gain);gain.connect(audioCtx.destination);osc.start(now);osc.stop(now+1.15);if(noteIndex%4===0){const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='triangle';o.frequency.value=freq/2;g.gain.setValueAtTime(.0001,now);g.gain.exponentialRampToValueAtTime(.018,now+.12);g.gain.exponentialRampToValueAtTime(.0001,now+1.4);o.connect(g);g.connect(audioCtx.destination);o.start(now);o.stop(now+1.45)}}
+async function toggleMusic(){try{if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')await audioCtx.resume();playing=!playing;if(playing){playNote();melodyTimer=setInterval(playNote,620);document.getElementById('eq').classList.add('playing');document.getElementById('musicText').textContent='Our soft little melody is playing · tap to pause'}else{clearInterval(melodyTimer);document.getElementById('eq').classList.remove('playing');document.getElementById('musicText').textContent='Melody paused · tap to play'} }catch(e){document.getElementById('musicText').textContent='Your browser could not start audio — try tapping again'} }
+function celebrate(){for(let i=0;i<70;i++){const c=document.createElement('span');c.className='confetti';c.textContent=['✦','♡','✧','♥'][Math.floor(Math.random()*4)];c.style.left=Math.random()*100+'vw';c.style.color=['#ffd99a','#ffb7ce','#fff2e8','#ff739f'][i%4];c.style.fontSize=(10+Math.random()*18)+'px';c.style.animationDuration=(2.4+Math.random()*2.4)+'s';c.style.animationDelay=(Math.random()*.8)+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),6000)}}
+document.getElementById('startBtn').addEventListener('click',async()=>{await toggleMusic();celebrate();document.getElementById('startBtn').textContent='A little surprise, just for you ♡';document.getElementById('startBtn').disabled=true;document.getElementById('startBtn').style.opacity='.85'});
+document.getElementById('musicText').addEventListener('click',toggleMusic);
+document.getElementById('letterBtn').addEventListener('click',()=>{const letter=document.getElementById('letter'),open=letter.classList.toggle('show');document.getElementById('letterBtn').setAttribute('aria-expanded',String(open));document.getElementById('letterBtn').textContent=open?'Close your letter ♡':'Read your letter 💌';if(open){celebrate();letter.scrollIntoView({behavior:'smooth',block:'center'})}});
+document.getElementById('secretBtn').addEventListener('click',()=>{const s=document.getElementById('secret');s.classList.toggle('show');document.getElementById('secretBtn').textContent=s.classList.contains('show')?'Keep this close to your heart ♡':'One last little thing…';if(s.classList.contains('show'))celebrate()});
+</script>
+</body>
+</html>
